@@ -1,60 +1,121 @@
+<<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-   <table border="1">
-  <thead>
-    <!-- First header row -->
-   
-    <!-- Second header row -->
-    <tr>
-      <th>Nested Table 2</th>
-      <th>Nested Table 1</th>
-      <th>Nested Table 3</th>
-      <th>Nested Table 4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <!-- Nested table inside Data 1 cell -->
-      <td>
-        <table border="1">
-          <thead>
-            <tr>
-              <th>Column 1</th>
-              <th>Column 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Data 1.1</td>
-              <td>Data 1.2</td>
-            </tr>
-            <tr>
-              <td>Data 2.1</td>
-              <td>Data 2.2</td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-		<table>
-      <td><ul><li>list item</li>
-		  <li>list item</li>
-		  <li>list item</li>
-	  </ul></td>
-			</table>
-		<table>
-      <td><a href='#'>Nested Table</a></td>
-      <td class='html'>HTML</td>
-			<table>
-    </tr>
-    <!-- Additional rows as needed -->
-  </tbody>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nested Table Layout</title>
+<style>
+  /* Main table styling */
+  .main-table {
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+  }
+
+  .main-table td {
+    border: 1px solid black;
+    padding: 15px;
+    vertical-align: top;
+  }
+
+  /* Header styling for nested tables */
+  .nested-header {
+    font-weight: bold;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 5px;
+    border-bottom: 2px solid black;
+  }
+
+  /* Styling for each nested table */
+  .nested-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  .nested-table th, .nested-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+
+  /* Box 2 list styling */
+  .box2-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+
+  /* Box 3 link styling */
+  .nested-link {
+    color: blue;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  /* Box 4 special cell styling */
+  .box4-special {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<table class="main-table">
+  <tr>
+    <!-- Box 1: Nested table with a header and two columns -->
+    <td>
+      <div class="nested-header">Nested Table 2</div>
+      <table class="nested-table">
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+        </tr>
+        <tr>
+          <td>abc</td>
+          <td>def</td>
+        </tr>
+      </table>
+    </td>
+
+    <!-- Box 2: List with items -->
+    <td>
+      <div class="nested-header">Nested Table 1</div>
+      <ul class="box2-list">
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+      </ul>
+    </td>
+  </tr>
+  
+  <tr>
+    <!-- Box 3: Nested table with link -->
+    <td>
+      <div class="nested-header">Nested Table 3</div>
+      <table class="nested-table">
+        <tr>
+          <td><a href="#" class="nested-link">Nested Table</a></td>
+          <td>Demo Continued</td>
+        </tr>
+      </table>
+    </td>
+
+    <!-- Box 4: Nested table with black cell -->
+    <td>
+      <div class="nested-header">Nested Table 4</div>
+      <table class="nested-table">
+        <tr>
+          <td class="box4-special">HTML</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
-    </body>
+</body>
 </html>

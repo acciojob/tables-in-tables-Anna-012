@@ -1,7 +1,77 @@
+/* Style for the main table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-/* Your CSS Code here. */
-#data{
+/* Style for all table cells (main table and nested tables) */
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}
+
+/* Box-specific background colors for differentiation */
+td:nth-child(1) {
+  background-color: #f0f8ff; /* Light blue for Box 1 */
+}
+td:nth-child(2) {
+  background-color: #f9f9e3; /* Light yellow for Box 2 */
+}
+tr:nth-child(2) td:nth-child(1) {
+  background-color: #e3f9e3; /* Light green for Box 3 */
+}
+tr:nth-child(2) td:nth-child(2) {
+  background-color: #f8e8f8; /* Light pink for Box 4 */
+}
+
+/* Nested table styles */
+table td table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+}
+
+/* Header styles for all tables */
+th {
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  text-align: left;
+}
+
+/* List styling in Box 2 */
+td:nth-child(2) ul {
+  padding-left: 20px; /* Indent list items */
+  list-style-type: disc;
+  margin: 0;
+}
+
+td:nth-child(2) ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Nested table cell styles */
+table td table th, 
+table td table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* Hover effect for nested table cells */
+table td table td:hover {
+  background-color: #e0f7fa; /* Light cyan hover effect */
+}
+
+/* Text alignment in all cells */
+td, th {
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.html{
 	background-color:black;
 	color:white;
-	text-align:center;
 }

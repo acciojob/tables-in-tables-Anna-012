@@ -69,8 +69,10 @@
   <tr>
     <!-- Box 1: Nested table with a header and two columns -->
     <td>
-      <div class="nested-header">Nested Table 2</div>
       <table class="nested-table">
+        <tr>
+          <th colspan="2">Nested Table 2</th>
+        </tr>
         <tr>
           <th>Column 1</th>
           <th>Column 2</th>
@@ -84,20 +86,30 @@
 
     <!-- Box 2: List with items -->
     <td>
-      <div class="nested-header">Nested Table 1</div>
-      <ul class="box2-list">
-        <li>List item 1</li>
-        <li>List item 2</li>
-        <li>List item 3</li>
-      </ul>
+      <table class="nested-table">
+        <tr>
+          <th>Nested Table 1</th>
+        </tr>
+        <tr>
+          <td>
+            <ul class="box2-list">
+              <li>List item 1</li>
+              <li>List item 2</li>
+              <li>List item 3</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
     </td>
   </tr>
   
   <tr>
     <!-- Box 3: Nested table with link -->
     <td>
-      <div class="nested-header">Nested Table 3</div>
       <table class="nested-table">
+        <tr>
+          <th colspan="2">Nested Table 3</th>
+        </tr>
         <tr>
           <td><a href="#" class="nested-link">Nested Table</a></td>
           <td>Demo Continued</td>
@@ -107,8 +119,10 @@
 
     <!-- Box 4: Nested table with black cell -->
     <td>
-      <div class="nested-header">Nested Table 4</div>
       <table class="nested-table">
+        <tr>
+          <th>Nested Table 4</th>
+        </tr>
         <tr>
           <td class="box4-special">HTML</td>
         </tr>
